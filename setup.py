@@ -11,7 +11,7 @@ setuptools.setup(
     description="A wrapper for c++ to solve the Traveling Salesman Problem",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/kjudom/tsp-c",
     project_urls={
         "Bug Tracker": "",
     },

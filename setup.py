@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="tsp-c",
-    version="0.0.1",
+    version="0.0.2",
     author="Udom Janjarassuk",
     author_email="kjudom@gmail.com",
     description="A wrapper for c++ to solve the Traveling Salesman Problem",
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/kjudom/tsp-c",
     project_urls={
-        "Bug Tracker": "",
+        "Bug Tracker": "https://github.com/kjudom/tsp-c",
     },
     classifiers=[
         "Programming Language :: Python :: 3",

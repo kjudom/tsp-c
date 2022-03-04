@@ -9,12 +9,12 @@ if _swig_python_version_info >= (2, 7, 0):
     def swig_import_helper():
         import importlib
         pkg = __name__.rpartition('.')[0]
-        mname = '.'.join((pkg, '_tsp')).lstrip('.')
+        mname = '.'.join((pkg, '_tsp_c')).lstrip('.')
         try:
             return importlib.import_module(mname)
         except ImportError:
-            return importlib.import_module('_tsp')
-    _tsp = swig_import_helper()
+            return importlib.import_module('_tsp_c')
+    _tsp_c = swig_import_helper()
     del swig_import_helper
 elif _swig_python_version_info >= (2, 6, 0):
     def swig_import_helper():
@@ -22,20 +22,20 @@ elif _swig_python_version_info >= (2, 6, 0):
         import imp
         fp = None
         try:
-            fp, pathname, description = imp.find_module('_tsp', [dirname(__file__)])
+            fp, pathname, description = imp.find_module('_tsp_c', [dirname(__file__)])
         except ImportError:
-            import _tsp
-            return _tsp
+            import _tsp_c
+            return _tsp_c
         try:
-            _mod = imp.load_module('_tsp', fp, pathname, description)
+            _mod = imp.load_module('_tsp_c', fp, pathname, description)
         finally:
             if fp is not None:
                 fp.close()
         return _mod
-    _tsp = swig_import_helper()
+    _tsp_c = swig_import_helper()
     del swig_import_helper
 else:
-    import _tsp
+    import _tsp_c
 del _swig_python_version_info
 
 try:
@@ -104,59 +104,59 @@ class SwigPyIterator(_object):
     def __init__(self, *args, **kwargs):
         raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
-    __swig_destroy__ = _tsp.delete_SwigPyIterator
+    __swig_destroy__ = _tsp_c.delete_SwigPyIterator
     __del__ = lambda self: None
 
     def value(self):
-        return _tsp.SwigPyIterator_value(self)
+        return _tsp_c.SwigPyIterator_value(self)
 
     def incr(self, n=1):
-        return _tsp.SwigPyIterator_incr(self, n)
+        return _tsp_c.SwigPyIterator_incr(self, n)
 
     def decr(self, n=1):
-        return _tsp.SwigPyIterator_decr(self, n)
+        return _tsp_c.SwigPyIterator_decr(self, n)
 
     def distance(self, x):
-        return _tsp.SwigPyIterator_distance(self, x)
+        return _tsp_c.SwigPyIterator_distance(self, x)
 
     def equal(self, x):
-        return _tsp.SwigPyIterator_equal(self, x)
+        return _tsp_c.SwigPyIterator_equal(self, x)
 
     def copy(self):
-        return _tsp.SwigPyIterator_copy(self)
+        return _tsp_c.SwigPyIterator_copy(self)
 
     def next(self):
-        return _tsp.SwigPyIterator_next(self)
+        return _tsp_c.SwigPyIterator_next(self)
 
     def __next__(self):
-        return _tsp.SwigPyIterator___next__(self)
+        return _tsp_c.SwigPyIterator___next__(self)
 
     def previous(self):
-        return _tsp.SwigPyIterator_previous(self)
+        return _tsp_c.SwigPyIterator_previous(self)
 
     def advance(self, n):
-        return _tsp.SwigPyIterator_advance(self, n)
+        return _tsp_c.SwigPyIterator_advance(self, n)
 
     def __eq__(self, x):
-        return _tsp.SwigPyIterator___eq__(self, x)
+        return _tsp_c.SwigPyIterator___eq__(self, x)
 
     def __ne__(self, x):
-        return _tsp.SwigPyIterator___ne__(self, x)
+        return _tsp_c.SwigPyIterator___ne__(self, x)
 
     def __iadd__(self, n):
-        return _tsp.SwigPyIterator___iadd__(self, n)
+        return _tsp_c.SwigPyIterator___iadd__(self, n)
 
     def __isub__(self, n):
-        return _tsp.SwigPyIterator___isub__(self, n)
+        return _tsp_c.SwigPyIterator___isub__(self, n)
 
     def __add__(self, n):
-        return _tsp.SwigPyIterator___add__(self, n)
+        return _tsp_c.SwigPyIterator___add__(self, n)
 
     def __sub__(self, *args):
-        return _tsp.SwigPyIterator___sub__(self, *args)
+        return _tsp_c.SwigPyIterator___sub__(self, *args)
     def __iter__(self):
         return self
-SwigPyIterator_swigregister = _tsp.SwigPyIterator_swigregister
+SwigPyIterator_swigregister = _tsp_c.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
 class VecDouble(_object):
@@ -167,109 +167,109 @@ class VecDouble(_object):
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _tsp.VecDouble_iterator(self)
+        return _tsp_c.VecDouble_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _tsp.VecDouble___nonzero__(self)
+        return _tsp_c.VecDouble___nonzero__(self)
 
     def __bool__(self):
-        return _tsp.VecDouble___bool__(self)
+        return _tsp_c.VecDouble___bool__(self)
 
     def __len__(self):
-        return _tsp.VecDouble___len__(self)
+        return _tsp_c.VecDouble___len__(self)
 
     def __getslice__(self, i, j):
-        return _tsp.VecDouble___getslice__(self, i, j)
+        return _tsp_c.VecDouble___getslice__(self, i, j)
 
     def __setslice__(self, *args):
-        return _tsp.VecDouble___setslice__(self, *args)
+        return _tsp_c.VecDouble___setslice__(self, *args)
 
     def __delslice__(self, i, j):
-        return _tsp.VecDouble___delslice__(self, i, j)
+        return _tsp_c.VecDouble___delslice__(self, i, j)
 
     def __delitem__(self, *args):
-        return _tsp.VecDouble___delitem__(self, *args)
+        return _tsp_c.VecDouble___delitem__(self, *args)
 
     def __getitem__(self, *args):
-        return _tsp.VecDouble___getitem__(self, *args)
+        return _tsp_c.VecDouble___getitem__(self, *args)
 
     def __setitem__(self, *args):
-        return _tsp.VecDouble___setitem__(self, *args)
+        return _tsp_c.VecDouble___setitem__(self, *args)
 
     def pop(self):
-        return _tsp.VecDouble_pop(self)
+        return _tsp_c.VecDouble_pop(self)
 
     def append(self, x):
-        return _tsp.VecDouble_append(self, x)
+        return _tsp_c.VecDouble_append(self, x)
 
     def empty(self):
-        return _tsp.VecDouble_empty(self)
+        return _tsp_c.VecDouble_empty(self)
 
     def size(self):
-        return _tsp.VecDouble_size(self)
+        return _tsp_c.VecDouble_size(self)
 
     def swap(self, v):
-        return _tsp.VecDouble_swap(self, v)
+        return _tsp_c.VecDouble_swap(self, v)
 
     def begin(self):
-        return _tsp.VecDouble_begin(self)
+        return _tsp_c.VecDouble_begin(self)
 
     def end(self):
-        return _tsp.VecDouble_end(self)
+        return _tsp_c.VecDouble_end(self)
 
     def rbegin(self):
-        return _tsp.VecDouble_rbegin(self)
+        return _tsp_c.VecDouble_rbegin(self)
 
     def rend(self):
-        return _tsp.VecDouble_rend(self)
+        return _tsp_c.VecDouble_rend(self)
 
     def clear(self):
-        return _tsp.VecDouble_clear(self)
+        return _tsp_c.VecDouble_clear(self)
 
     def get_allocator(self):
-        return _tsp.VecDouble_get_allocator(self)
+        return _tsp_c.VecDouble_get_allocator(self)
 
     def pop_back(self):
-        return _tsp.VecDouble_pop_back(self)
+        return _tsp_c.VecDouble_pop_back(self)
 
     def erase(self, *args):
-        return _tsp.VecDouble_erase(self, *args)
+        return _tsp_c.VecDouble_erase(self, *args)
 
     def __init__(self, *args):
-        this = _tsp.new_VecDouble(*args)
+        this = _tsp_c.new_VecDouble(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def push_back(self, x):
-        return _tsp.VecDouble_push_back(self, x)
+        return _tsp_c.VecDouble_push_back(self, x)
 
     def front(self):
-        return _tsp.VecDouble_front(self)
+        return _tsp_c.VecDouble_front(self)
 
     def back(self):
-        return _tsp.VecDouble_back(self)
+        return _tsp_c.VecDouble_back(self)
 
     def assign(self, n, x):
-        return _tsp.VecDouble_assign(self, n, x)
+        return _tsp_c.VecDouble_assign(self, n, x)
 
     def resize(self, *args):
-        return _tsp.VecDouble_resize(self, *args)
+        return _tsp_c.VecDouble_resize(self, *args)
 
     def insert(self, *args):
-        return _tsp.VecDouble_insert(self, *args)
+        return _tsp_c.VecDouble_insert(self, *args)
 
     def reserve(self, n):
-        return _tsp.VecDouble_reserve(self, n)
+        return _tsp_c.VecDouble_reserve(self, n)
 
     def capacity(self):
-        return _tsp.VecDouble_capacity(self)
-    __swig_destroy__ = _tsp.delete_VecDouble
+        return _tsp_c.VecDouble_capacity(self)
+    __swig_destroy__ = _tsp_c.delete_VecDouble
     __del__ = lambda self: None
-VecDouble_swigregister = _tsp.VecDouble_swigregister
+VecDouble_swigregister = _tsp_c.VecDouble_swigregister
 VecDouble_swigregister(VecDouble)
 
 class VecInt(_object):
@@ -280,109 +280,109 @@ class VecInt(_object):
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _tsp.VecInt_iterator(self)
+        return _tsp_c.VecInt_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _tsp.VecInt___nonzero__(self)
+        return _tsp_c.VecInt___nonzero__(self)
 
     def __bool__(self):
-        return _tsp.VecInt___bool__(self)
+        return _tsp_c.VecInt___bool__(self)
 
     def __len__(self):
-        return _tsp.VecInt___len__(self)
+        return _tsp_c.VecInt___len__(self)
 
     def __getslice__(self, i, j):
-        return _tsp.VecInt___getslice__(self, i, j)
+        return _tsp_c.VecInt___getslice__(self, i, j)
 
     def __setslice__(self, *args):
-        return _tsp.VecInt___setslice__(self, *args)
+        return _tsp_c.VecInt___setslice__(self, *args)
 
     def __delslice__(self, i, j):
-        return _tsp.VecInt___delslice__(self, i, j)
+        return _tsp_c.VecInt___delslice__(self, i, j)
 
     def __delitem__(self, *args):
-        return _tsp.VecInt___delitem__(self, *args)
+        return _tsp_c.VecInt___delitem__(self, *args)
 
     def __getitem__(self, *args):
-        return _tsp.VecInt___getitem__(self, *args)
+        return _tsp_c.VecInt___getitem__(self, *args)
 
     def __setitem__(self, *args):
-        return _tsp.VecInt___setitem__(self, *args)
+        return _tsp_c.VecInt___setitem__(self, *args)
 
     def pop(self):
-        return _tsp.VecInt_pop(self)
+        return _tsp_c.VecInt_pop(self)
 
     def append(self, x):
-        return _tsp.VecInt_append(self, x)
+        return _tsp_c.VecInt_append(self, x)
 
     def empty(self):
-        return _tsp.VecInt_empty(self)
+        return _tsp_c.VecInt_empty(self)
 
     def size(self):
-        return _tsp.VecInt_size(self)
+        return _tsp_c.VecInt_size(self)
 
     def swap(self, v):
-        return _tsp.VecInt_swap(self, v)
+        return _tsp_c.VecInt_swap(self, v)
 
     def begin(self):
-        return _tsp.VecInt_begin(self)
+        return _tsp_c.VecInt_begin(self)
 
     def end(self):
-        return _tsp.VecInt_end(self)
+        return _tsp_c.VecInt_end(self)
 
     def rbegin(self):
-        return _tsp.VecInt_rbegin(self)
+        return _tsp_c.VecInt_rbegin(self)
 
     def rend(self):
-        return _tsp.VecInt_rend(self)
+        return _tsp_c.VecInt_rend(self)
 
     def clear(self):
-        return _tsp.VecInt_clear(self)
+        return _tsp_c.VecInt_clear(self)
 
     def get_allocator(self):
-        return _tsp.VecInt_get_allocator(self)
+        return _tsp_c.VecInt_get_allocator(self)
 
     def pop_back(self):
-        return _tsp.VecInt_pop_back(self)
+        return _tsp_c.VecInt_pop_back(self)
 
     def erase(self, *args):
-        return _tsp.VecInt_erase(self, *args)
+        return _tsp_c.VecInt_erase(self, *args)
 
     def __init__(self, *args):
-        this = _tsp.new_VecInt(*args)
+        this = _tsp_c.new_VecInt(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def push_back(self, x):
-        return _tsp.VecInt_push_back(self, x)
+        return _tsp_c.VecInt_push_back(self, x)
 
     def front(self):
-        return _tsp.VecInt_front(self)
+        return _tsp_c.VecInt_front(self)
 
     def back(self):
-        return _tsp.VecInt_back(self)
+        return _tsp_c.VecInt_back(self)
 
     def assign(self, n, x):
-        return _tsp.VecInt_assign(self, n, x)
+        return _tsp_c.VecInt_assign(self, n, x)
 
     def resize(self, *args):
-        return _tsp.VecInt_resize(self, *args)
+        return _tsp_c.VecInt_resize(self, *args)
 
     def insert(self, *args):
-        return _tsp.VecInt_insert(self, *args)
+        return _tsp_c.VecInt_insert(self, *args)
 
     def reserve(self, n):
-        return _tsp.VecInt_reserve(self, n)
+        return _tsp_c.VecInt_reserve(self, n)
 
     def capacity(self):
-        return _tsp.VecInt_capacity(self)
-    __swig_destroy__ = _tsp.delete_VecInt
+        return _tsp_c.VecInt_capacity(self)
+    __swig_destroy__ = _tsp_c.delete_VecInt
     __del__ = lambda self: None
-VecInt_swigregister = _tsp.VecInt_swigregister
+VecInt_swigregister = _tsp_c.VecInt_swigregister
 VecInt_swigregister(VecInt)
 
 class VecVecdouble(_object):
@@ -393,109 +393,109 @@ class VecVecdouble(_object):
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _tsp.VecVecdouble_iterator(self)
+        return _tsp_c.VecVecdouble_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _tsp.VecVecdouble___nonzero__(self)
+        return _tsp_c.VecVecdouble___nonzero__(self)
 
     def __bool__(self):
-        return _tsp.VecVecdouble___bool__(self)
+        return _tsp_c.VecVecdouble___bool__(self)
 
     def __len__(self):
-        return _tsp.VecVecdouble___len__(self)
+        return _tsp_c.VecVecdouble___len__(self)
 
     def __getslice__(self, i, j):
-        return _tsp.VecVecdouble___getslice__(self, i, j)
+        return _tsp_c.VecVecdouble___getslice__(self, i, j)
 
     def __setslice__(self, *args):
-        return _tsp.VecVecdouble___setslice__(self, *args)
+        return _tsp_c.VecVecdouble___setslice__(self, *args)
 
     def __delslice__(self, i, j):
-        return _tsp.VecVecdouble___delslice__(self, i, j)
+        return _tsp_c.VecVecdouble___delslice__(self, i, j)
 
     def __delitem__(self, *args):
-        return _tsp.VecVecdouble___delitem__(self, *args)
+        return _tsp_c.VecVecdouble___delitem__(self, *args)
 
     def __getitem__(self, *args):
-        return _tsp.VecVecdouble___getitem__(self, *args)
+        return _tsp_c.VecVecdouble___getitem__(self, *args)
 
     def __setitem__(self, *args):
-        return _tsp.VecVecdouble___setitem__(self, *args)
+        return _tsp_c.VecVecdouble___setitem__(self, *args)
 
     def pop(self):
-        return _tsp.VecVecdouble_pop(self)
+        return _tsp_c.VecVecdouble_pop(self)
 
     def append(self, x):
-        return _tsp.VecVecdouble_append(self, x)
+        return _tsp_c.VecVecdouble_append(self, x)
 
     def empty(self):
-        return _tsp.VecVecdouble_empty(self)
+        return _tsp_c.VecVecdouble_empty(self)
 
     def size(self):
-        return _tsp.VecVecdouble_size(self)
+        return _tsp_c.VecVecdouble_size(self)
 
     def swap(self, v):
-        return _tsp.VecVecdouble_swap(self, v)
+        return _tsp_c.VecVecdouble_swap(self, v)
 
     def begin(self):
-        return _tsp.VecVecdouble_begin(self)
+        return _tsp_c.VecVecdouble_begin(self)
 
     def end(self):
-        return _tsp.VecVecdouble_end(self)
+        return _tsp_c.VecVecdouble_end(self)
 
     def rbegin(self):
-        return _tsp.VecVecdouble_rbegin(self)
+        return _tsp_c.VecVecdouble_rbegin(self)
 
     def rend(self):
-        return _tsp.VecVecdouble_rend(self)
+        return _tsp_c.VecVecdouble_rend(self)
 
     def clear(self):
-        return _tsp.VecVecdouble_clear(self)
+        return _tsp_c.VecVecdouble_clear(self)
 
     def get_allocator(self):
-        return _tsp.VecVecdouble_get_allocator(self)
+        return _tsp_c.VecVecdouble_get_allocator(self)
 
     def pop_back(self):
-        return _tsp.VecVecdouble_pop_back(self)
+        return _tsp_c.VecVecdouble_pop_back(self)
 
     def erase(self, *args):
-        return _tsp.VecVecdouble_erase(self, *args)
+        return _tsp_c.VecVecdouble_erase(self, *args)
 
     def __init__(self, *args):
-        this = _tsp.new_VecVecdouble(*args)
+        this = _tsp_c.new_VecVecdouble(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def push_back(self, x):
-        return _tsp.VecVecdouble_push_back(self, x)
+        return _tsp_c.VecVecdouble_push_back(self, x)
 
     def front(self):
-        return _tsp.VecVecdouble_front(self)
+        return _tsp_c.VecVecdouble_front(self)
 
     def back(self):
-        return _tsp.VecVecdouble_back(self)
+        return _tsp_c.VecVecdouble_back(self)
 
     def assign(self, n, x):
-        return _tsp.VecVecdouble_assign(self, n, x)
+        return _tsp_c.VecVecdouble_assign(self, n, x)
 
     def resize(self, *args):
-        return _tsp.VecVecdouble_resize(self, *args)
+        return _tsp_c.VecVecdouble_resize(self, *args)
 
     def insert(self, *args):
-        return _tsp.VecVecdouble_insert(self, *args)
+        return _tsp_c.VecVecdouble_insert(self, *args)
 
     def reserve(self, n):
-        return _tsp.VecVecdouble_reserve(self, n)
+        return _tsp_c.VecVecdouble_reserve(self, n)
 
     def capacity(self):
-        return _tsp.VecVecdouble_capacity(self)
-    __swig_destroy__ = _tsp.delete_VecVecdouble
+        return _tsp_c.VecVecdouble_capacity(self)
+    __swig_destroy__ = _tsp_c.delete_VecVecdouble
     __del__ = lambda self: None
-VecVecdouble_swigregister = _tsp.VecVecdouble_swigregister
+VecVecdouble_swigregister = _tsp_c.VecVecdouble_swigregister
 VecVecdouble_swigregister(VecVecdouble)
 
 class PairVecDouble(_object):
@@ -506,19 +506,19 @@ class PairVecDouble(_object):
     __repr__ = _swig_repr
 
     def __init__(self, *args):
-        this = _tsp.new_PairVecDouble(*args)
+        this = _tsp_c.new_PairVecDouble(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_setmethods__["first"] = _tsp.PairVecDouble_first_set
-    __swig_getmethods__["first"] = _tsp.PairVecDouble_first_get
+    __swig_setmethods__["first"] = _tsp_c.PairVecDouble_first_set
+    __swig_getmethods__["first"] = _tsp_c.PairVecDouble_first_get
     if _newclass:
-        first = _swig_property(_tsp.PairVecDouble_first_get, _tsp.PairVecDouble_first_set)
-    __swig_setmethods__["second"] = _tsp.PairVecDouble_second_set
-    __swig_getmethods__["second"] = _tsp.PairVecDouble_second_get
+        first = _swig_property(_tsp_c.PairVecDouble_first_get, _tsp_c.PairVecDouble_first_set)
+    __swig_setmethods__["second"] = _tsp_c.PairVecDouble_second_set
+    __swig_getmethods__["second"] = _tsp_c.PairVecDouble_second_get
     if _newclass:
-        second = _swig_property(_tsp.PairVecDouble_second_get, _tsp.PairVecDouble_second_set)
+        second = _swig_property(_tsp_c.PairVecDouble_second_get, _tsp_c.PairVecDouble_second_set)
     def __len__(self):
         return 2
     def __repr__(self):
@@ -533,23 +533,23 @@ class PairVecDouble(_object):
             self.first = val
         else:
             self.second = val
-    __swig_destroy__ = _tsp.delete_PairVecDouble
+    __swig_destroy__ = _tsp_c.delete_PairVecDouble
     __del__ = lambda self: None
-PairVecDouble_swigregister = _tsp.PairVecDouble_swigregister
+PairVecDouble_swigregister = _tsp_c.PairVecDouble_swigregister
 PairVecDouble_swigregister(PairVecDouble)
 
 
 def solve_greedy(d_matrix):
-    return _tsp.solve_greedy(d_matrix)
-solve_greedy = _tsp.solve_greedy
+    return _tsp_c.solve_greedy(d_matrix)
+solve_greedy = _tsp_c.solve_greedy
 
 def solve_SA(d_matrix):
-    return _tsp.solve_SA(d_matrix)
-solve_SA = _tsp.solve_SA
+    return _tsp_c.solve_SA(d_matrix)
+solve_SA = _tsp_c.solve_SA
 
 def set_param_SA(C0, Cmin, L0, alpha):
-    return _tsp.set_param_SA(C0, Cmin, L0, alpha)
-set_param_SA = _tsp.set_param_SA
+    return _tsp_c.set_param_SA(C0, Cmin, L0, alpha)
+set_param_SA = _tsp_c.set_param_SA
 # This file is compatible with both classic and new-style classes.
 
 

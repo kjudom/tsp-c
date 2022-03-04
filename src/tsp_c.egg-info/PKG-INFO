@@ -15,5 +15,7 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-UNKNOWN
+# tsp-c Package
+
+A wrapper for c++ to solve the Traveling Salesman Problem
 

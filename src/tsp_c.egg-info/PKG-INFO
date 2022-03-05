@@ -10,7 +10,7 @@ Project-URL: Bug Tracker, https://github.com/kjudom/tsp-c/issues
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: POSIX :: LINUX
+Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE

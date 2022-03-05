@@ -23,8 +23,8 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        #"Operating System :: OS Independent",
-        "Operating System :: POSIX :: LINUX",        
+        "Operating System :: OS Independent",
+        #"Operating System :: POSIX :: LINUX",        
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),

@@ -38,10 +38,10 @@ To set the parameters of the Simulated Annealing method, use:
 	
 
 where
-* C0 = Initial temperature
-* Cmin = Final temperature
-* L0 = Number of iterations in each temperature
-* alpha = cooling rate
+* C0 = Initial temperature (default = 20.0)
+* Cmin = Final temperature (default = 0.1)
+* L0 = Number of iterations in each temperature (default = 10000)
+* alpha = cooling rate (default = 0.9)
 
 For example:
 

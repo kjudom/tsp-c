@@ -50,5 +50,5 @@ For example:
 ## Requirement
 python >=3.6
 
-## Operation System
+## Operating System
 Linux

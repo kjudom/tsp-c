@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tsp-c
-Version: 0.0.7
+Version: 0.0.8
 Summary: A wrapper for c++ to solve the Traveling Salesman Problem
 Home-page: https://github.com/kjudom/tsp-c
 Author: Udom Janjarassuk

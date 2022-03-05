@@ -1,11 +1,16 @@
 import setuptools
+from setuptools import dist
 
+class BinaryDistribution(dist.Distribution):
+    def has_ext_modules(tsp_c):
+        return True
+        
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="tsp-c",
-    version="0.0.7",
+    version="0.0.8",
     author="Udom Janjarassuk",
     author_email="kjudom@gmail.com",
     description="A wrapper for c++ to solve the Traveling Salesman Problem",
@@ -23,4 +28,8 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
+    
+    # make sure the shared library is included
+    package_data={'tsp_c': ['_tsp_c.so']},
+    include_package_data=True,
 )

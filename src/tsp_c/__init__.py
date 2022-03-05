@@ -1,1 +1,0 @@
-from . import _tsp_c

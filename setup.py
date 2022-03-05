@@ -10,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="tsp-c",
-    version="0.0.12",
+    version="0.0.13",
     author="Udom Janjarassuk",
     author_email="kjudom@gmail.com",
     description="A wrapper for c++ to solve the Traveling Salesman Problem",

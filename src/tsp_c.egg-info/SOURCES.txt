@@ -4,6 +4,7 @@ pyproject.toml
 setup.py
 src/tsp_c/__init__.py
 src/tsp_c/_tsp_c.so
+src/tsp_c/_tsp_c_win.so
 src/tsp_c/tsp_c.py
 src/tsp_c.egg-info/PKG-INFO
 src/tsp_c.egg-info/SOURCES.txt

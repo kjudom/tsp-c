@@ -10,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="tsp-c",
-    version="0.0.14",
+    version="0.0.15",
     author="Udom Janjarassuk",
     author_email="kjudom@gmail.com",
     description="A wrapper for c++ to solve the Traveling Salesman Problem",
@@ -32,6 +32,7 @@ setuptools.setup(
     python_requires=">=3.6",
     
     # make sure the shared library is included
-    package_data={'tsp_c': ['_tsp_c.so']},
+    # package_data={'tsp_c': ['_tsp_c_lnx.so']},    # for Linux
+    package_data={'tsp_c': ['_tsp_c_win.so']},      # for Windows
     include_package_data=True,
 )

@@ -7,6 +7,7 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 
 ## Examples
 To solve the problem with the Greedy method:
+
 `
 import tsp_c as tsp
 
@@ -23,6 +24,7 @@ print(distance, " ", sol)
 `
 
 To solve the problem with the Simulated Annealing method, change the code to:
+
 `
 sol, distance = tsp.solve_SA(distance_matrix)
 `
@@ -32,6 +34,7 @@ To set the parameters of the Simulated Annealing method, use:
 `
 tsp.set_param_SA(C0, Cmin, L0, alpha)
 `
+
 where
 * C0 = Initial temperature
 * Cmin = Final temperature
@@ -39,6 +42,7 @@ where
 * alpha = cooling rate
 
 For example:
+
 `
 tsp.set_param_SA(10.0, 0.01, 10000, 0.95)
 `

@@ -23,6 +23,8 @@ To solve the problem with the Greedy method:
 	print(distance, " ", sol)
 	
 
+The solution will be   `(1, 3, 0, 2)` with total distance 1073.8000000000002.
+
 To solve the problem with the Simulated Annealing method, change the code to:
 
 	

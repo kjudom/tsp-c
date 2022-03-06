@@ -5,6 +5,11 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 ## Installation
 `pip install tsp-c`
 
+## Available methods
+* Greedy
+* Simulated Annealing (SA)
+* Particle Swarm Optimization (PSO)
+
 ## Available functions
 	solve_greedy(distance_matrix)
 	solve_SA(distance_matrix)

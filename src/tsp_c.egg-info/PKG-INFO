@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tsp-c
-Version: 0.0.18
+Version: 0.0.19
 Summary: A wrapper for c++ to solve the Traveling Salesman Problem
 Home-page: https://github.com/kjudom/tsp-c
 Author: Udom Janjarassuk
@@ -21,6 +21,12 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 
 ## Installation
 `pip install tsp-c`
+
+## Available functions
+	solve_greedy(distance_matrix)
+	solve_SA(distance_matrix)
+	set_param_SA(C0, Cmin, L0, alpha)
+	solve_PSO(distance_matrix)
 
 ## Examples
 To solve the problem with the Greedy method:

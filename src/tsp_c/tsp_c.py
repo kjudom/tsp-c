@@ -550,6 +550,10 @@ solve_SA = _tsp_c.solve_SA
 def set_param_SA(C0, Cmin, L0, alpha):
     return _tsp_c.set_param_SA(C0, Cmin, L0, alpha)
 set_param_SA = _tsp_c.set_param_SA
+
+def solve_PSO(d_matrix):
+    return _tsp_c.solve_PSO(d_matrix)
+solve_PSO = _tsp_c.solve_PSO
 # This file is compatible with both classic and new-style classes.
 
 

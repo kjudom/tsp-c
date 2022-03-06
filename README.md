@@ -5,6 +5,12 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 ## Installation
 `pip install tsp-c`
 
+## Available functions
+	solve_greedy(distance_matrix)
+	solve_SA(distance_matrix)
+	set_param_SA(C0, Cmin, L0, alpha)
+	solve_PSO(distance_matrix)
+
 ## Examples
 To solve the problem with the Greedy method:
 

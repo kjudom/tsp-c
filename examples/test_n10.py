@@ -20,3 +20,7 @@ print(distance, " ", sol)
 sol, distance = tsp.solve_SA(distance_matrix)
 print("\nSolution from Simulated Annealing:")
 print(distance, " ", sol)
+
+sol, distance = tsp.solve_PSO(distance_matrix)
+print("\nSolution from PSO:")
+print(distance, " ", sol)

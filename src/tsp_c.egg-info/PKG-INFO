@@ -1,13 +1,11 @@
 Metadata-Version: 2.1
 Name: tsp-c
-Version: 0.0.19
+Version: 0.0.21
 Summary: A wrapper for c++ to solve the Traveling Salesman Problem
 Home-page: https://github.com/kjudom/tsp-c
 Author: Udom Janjarassuk
 Author-email: kjudom@gmail.com
-License: UNKNOWN
 Project-URL: Bug Tracker, https://github.com/kjudom/tsp-c/issues
-Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -22,11 +20,18 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 ## Installation
 `pip install tsp-c`
 
+## Available methods
+* Greedy
+* Simulated Annealing (SA)
+* Particle Swarm Optimization (PSO)
+
 ## Available functions
 	solve_greedy(distance_matrix)
 	solve_SA(distance_matrix)
 	set_param_SA(C0, Cmin, L0, alpha)
 	solve_PSO(distance_matrix)
+	set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
+	solve_ACO(distance_matrix)
 
 ## Examples
 To solve the problem with the Greedy method:
@@ -71,11 +76,30 @@ For example:
 	
 	tsp.set_param_SA(10.0, 0.01, 10000, 0.95)
 	
+	
+To set the parameters of the ACO method, use:
 
+	
+	tsp.set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
+	
+
+where
+* hconst = Heuristic Constant (default = 50.0)
+* alpha = Pheromone influence (default = 0.1)
+* beta = Heuristic influence (default = 10)
+* evprate = Evaporation Rate (default = 0.1)
+* intsty = Pheromone intensity (default = 0.1)
+* nAnt = Number of ants (default = 100)
+* nItr = Number of iterations (default = 100)
+
+For example:
+
+	
+	tsp.set_param_ACO(100.0, 0.15, 4, 0.1, 0.15, 200, 200)
+	
+	
 ## Requirement
 python >=3.6
 
 ## Operating System
 Linux
-
-

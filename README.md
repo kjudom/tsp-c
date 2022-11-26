@@ -15,6 +15,8 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 	solve_SA(distance_matrix)
 	set_param_SA(C0, Cmin, L0, alpha)
 	solve_PSO(distance_matrix)
+	set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
+	solve_ACO(distance_matrix)
 
 ## Examples
 To solve the problem with the Greedy method:
@@ -59,7 +61,28 @@ For example:
 	
 	tsp.set_param_SA(10.0, 0.01, 10000, 0.95)
 	
+	
+To set the parameters of the ACO method, use:
 
+	
+	tsp.set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
+	
+
+where
+* hconst = Heuristic Constant (default = 50.0)
+* alpha = Pheromone influence (default = 0.1)
+* beta = Heuristic influence (default = 10)
+* evprate = Evaporation Rate (default = 0.1)
+* intsty = Pheromone intensity (default = 0.1)
+* nAnt = Number of ants (default = 100)
+* nItr = Number of iterations (default = 100)
+
+For example:
+
+	
+	tsp.set_param_ACO(100.0, 0.15, 4, 0.1, 0.15, 200, 200)
+	
+	
 ## Requirement
 python >=3.6
 

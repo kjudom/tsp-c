@@ -554,6 +554,14 @@ set_param_SA = _tsp_c.set_param_SA
 def solve_PSO(d_matrix):
     return _tsp_c.solve_PSO(d_matrix)
 solve_PSO = _tsp_c.solve_PSO
+
+def set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr):
+    return _tsp_c.set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
+set_param_ACO = _tsp_c.set_param_ACO
+
+def solve_ACO(d_matrix):
+    return _tsp_c.solve_ACO(d_matrix)
+solve_ACO = _tsp_c.solve_ACO
 # This file is compatible with both classic and new-style classes.
 
 

@@ -9,6 +9,7 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 * Greedy
 * Simulated Annealing (SA)
 * Particle Swarm Optimization (PSO)
+* Ant Colony Optimization (ACO)
 
 ## Available functions
 	solve_greedy(distance_matrix)

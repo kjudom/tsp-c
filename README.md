@@ -89,3 +89,6 @@ python >=3.6
 
 ## Operating System
 Linux
+
+## References
+* Janjarassuk, Udom. (2011). A comparison of heuristic approaches to the travelling salesman problem. ICIC Express Letters. 5. 279-283. 

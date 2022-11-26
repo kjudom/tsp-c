@@ -562,6 +562,10 @@ set_param_ACO = _tsp_c.set_param_ACO
 def solve_ACO(d_matrix):
     return _tsp_c.solve_ACO(d_matrix)
 solve_ACO = _tsp_c.solve_ACO
+
+def solve_two_opt(d_matrix):
+    return _tsp_c.solve_two_opt(d_matrix)
+solve_two_opt = _tsp_c.solve_two_opt
 # This file is compatible with both classic and new-style classes.
 
 

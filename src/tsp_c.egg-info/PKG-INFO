@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tsp-c
-Version: 0.0.21
+Version: 0.0.22
 Summary: A wrapper for c++ to solve the Traveling Salesman Problem
 Home-page: https://github.com/kjudom/tsp-c
 Author: Udom Janjarassuk
@@ -24,6 +24,8 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 * Greedy
 * Simulated Annealing (SA)
 * Particle Swarm Optimization (PSO)
+* Ant Colony Optimization (ACO)
+* Two-opt Heuristic
 
 ## Available functions
 	solve_greedy(distance_matrix)
@@ -32,6 +34,7 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 	solve_PSO(distance_matrix)
 	set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
 	solve_ACO(distance_matrix)
+	solve_two_opt(distance_matrix)
 
 ## Examples
 To solve the problem with the Greedy method:
@@ -103,3 +106,6 @@ python >=3.6
 
 ## Operating System
 Linux
+
+## References
+* Janjarassuk, Udom. (2011). A comparison of heuristic approaches to the travelling salesman problem. ICIC Express Letters. 5. 279-283. 

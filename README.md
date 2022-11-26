@@ -10,6 +10,7 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 * Simulated Annealing (SA)
 * Particle Swarm Optimization (PSO)
 * Ant Colony Optimization (ACO)
+* Two-opt Heuristic
 
 ## Available functions
 	solve_greedy(distance_matrix)
@@ -18,6 +19,7 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 	solve_PSO(distance_matrix)
 	set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
 	solve_ACO(distance_matrix)
+	solve_two_opt(distance_matrix)
 
 ## Examples
 To solve the problem with the Greedy method:

@@ -566,6 +566,10 @@ solve_ACO = _tsp_c.solve_ACO
 def solve_two_opt(d_matrix):
     return _tsp_c.solve_two_opt(d_matrix)
 solve_two_opt = _tsp_c.solve_two_opt
+
+def set_param_PSO(w, c1, c2, maxV, muProb, nPar, nItr):
+    return _tsp_c.set_param_PSO(w, c1, c2, maxV, muProb, nPar, nItr)
+set_param_PSO = _tsp_c.set_param_PSO
 # This file is compatible with both classic and new-style classes.
 
 

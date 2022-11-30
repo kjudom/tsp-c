@@ -6,3 +6,4 @@ from .tsp_c import solve_PSO
 from .tsp_c import solve_ACO
 from .tsp_c import set_param_ACO
 from .tsp_c import solve_two_opt
+from .tsp_c import set_param_PSO

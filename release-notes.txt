@@ -1,0 +1,8 @@
+RELEASE NOTES 
+
+
+0.0.24
+-----------------------------
+
+Add method
+- Add set_param_PSO() to change the default parameters of Particle Swarm Optimiztion

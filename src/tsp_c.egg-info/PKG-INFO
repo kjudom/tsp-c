@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tsp-c
-Version: 0.0.23
+Version: 0.0.24
 Summary: A wrapper for c++ to solve the Traveling Salesman Problem
 Home-page: https://github.com/kjudom/tsp-c
 Author: Udom Janjarassuk
@@ -35,6 +35,7 @@ A wrapper for c++ to solve the Traveling Salesman Problem
 	set_param_ACO(hconst, alpha, beta, evprate, intsty, nAnt, nItr)
 	solve_ACO(distance_matrix)
 	solve_two_opt(distance_matrix)
+	set_param_PSO(w, c1, c2, maxV, muProb, nPar, nItr)
 
 ## Examples
 To solve the problem with the Greedy method:
@@ -99,6 +100,27 @@ For example:
 
 	
 	tsp.set_param_ACO(100.0, 0.15, 4, 0.1, 0.15, 200, 200)
+	
+
+To set the parameters of the PSO method, use:
+
+	
+	tsp.set_param_PSO(w, c1, c2, maxV, muProb, nPar, nItr)
+	
+
+where
+* w = Inertia weight of the particle (default = 1.0)
+* c1 = acceleration coefficient for the local best position (default = 2.0)
+* c2 = acceleration coefficient for the global best position (default = 2.0)
+* maxV = Maximum velocity of the particles (default = 2.0)
+* muProb = mutation probability that change the position of a particle (default = 0.05)
+* nPar = Number of particles (default = 100)
+* nItr = Number of iterations (default = 5000)
+
+For example:
+
+	
+	tsp.set_param_PSO(0.8, 1.5, 1.5, 5, 0.1, 200, 1000)
 	
 	
 ## Requirement

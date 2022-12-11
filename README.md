@@ -74,8 +74,8 @@ To set the parameters of the ACO method, use:
 
 where
 * hconst = Heuristic Constant (default = 50.0)
-* alpha = Pheromone influence (default = 0.1)
-* beta = Heuristic influence (default = 10)
+* alpha = Pheromone influence (default = 0.1, min = 0.0001, max = 10.0)
+* beta = Heuristic influence (default = 5, min = 0.0001, max = 10.0)
 * evprate = Evaporation Rate (default = 0.1)
 * intsty = Pheromone intensity (default = 0.1)
 * nAnt = Number of ants (default = 100)

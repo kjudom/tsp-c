@@ -74,17 +74,17 @@ To set the parameters of the ACO method, use:
 
 where
 * hconst = Heuristic Constant (default = 50.0)
-* alpha = Pheromone influence (default = 0.1, min = 0.0001, max = 10.0)
+* alpha = Pheromone influence (default = 3, min = 0.0001, max = 10.0)
 * beta = Heuristic influence (default = 5, min = 0.0001, max = 10.0)
-* evprate = Evaporation Rate (default = 0.1)
+* evprate = Evaporation Rate (default = 0.05)
 * intsty = Pheromone intensity (default = 0.1)
-* nAnt = Number of ants (default = 100)
+* nAnt = Number of ants (default = 50)
 * nItr = Number of iterations (default = 100)
 
 For example:
 
 	
-	tsp.set_param_ACO(100.0, 0.15, 4, 0.1, 0.15, 200, 200)
+	tsp.set_param_ACO(100.0, 5, 4, 0.1, 0.15, 200, 200)
 	
 
 To set the parameters of the PSO method, use:
